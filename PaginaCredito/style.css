@@ -1,0 +1,293 @@
+/* Configuración general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #cce7ff, #e6ccff); /* Fondo celeste claro a lila clarito */
+  }
+  
+  /* Contenedor del login */
+  .login-container {
+    background: #fff;
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+  }
+  
+  .login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Formulario */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Botón */
+  .btn {
+    background: #5e239d; /* Color morado uva */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #4a1a7b; /* Tono más oscuro de morado uva */
+  }
+  
+  /* Enlace de registro */
+  .register-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #5e239d; /* Morado uva */
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+
+  
+
+
+
+  /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Fondo celeste claro */
+    color: #4b0082; /* Texto morado */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e6e6fa; /* Lila claro */
+    border-radius: 10px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    color: #4b0082;
+  }
+  
+  nav {
+    text-align: right;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-menu li {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #4b0082;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #8a2be2; /* Morado uva */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: #6a1c9a; /* Morado más oscuro al pasar el mouse */
+  }
+  
+  /* Barra desplegable */
+  .nav-menu li:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e6e6fa;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .dropdown li {
+    margin: 0;
+  }
+  
+  .dropdown li a {
+    padding: 10px 20px;
+    color: #4b0082;
+    text-align: left;
+    background-color: #e6e6fa;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown li a:hover {
+    background-color: #8a2be2;
+  }
+  
+  /* Sección de productos */
+  .products {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .product-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    color: #4b0082;
+  }
+  
+  .product-card button {
+    background-color: #8a2be2; /* Morado uva */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card button:hover {
+    background-color: #6a1c9a;
+  }
+  
+
+  
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Fondo celeste claro */
+    color: #4b0082; /* Texto morado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Contenedor general */
+  .contenedor {
+    width: 160%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Título centrado */
+  .titulo h1 {
+    font-size: 2rem;
+    color: #4b0082;
+    margin-bottom: 270px;
+  }
+  
+/* Contenedor del menú */
+.menu {
+    display: flex;
+    justify-content: flex-end; /* Botones alineados a la derecha */
+    margin-top: 20px; /* Ajustar esta distancia para mover los botones */
+  }
+  
+  /* Botones en columna */
+  .botones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alineados a la derecha */
+    gap: 15px; /* Espacio entre botones */
+    margin-top: -30px; /* Mover los botones más arriba */
+  }
+    
+  /* Estilos de los botones */
+  .boton {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #8a2be2; /* Morado uva */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100px; /* Tamaño uniforme de los botones */
+    text-align: center; /* Centrar el texto */
+  }
+  
+  .boton:hover {
+    background-color: #6a1c9a; /* Morado más oscuro */
+  }
+  
+  /* Botón rojo */
+  .boton-rojo {
+    background-color: #e74c3c; /* Rojo */
+  }
+  
+  .boton-rojo:hover {
+    background-color: #c0392b; /* Rojo oscuro */
+  }
+    
+  /* Botón de cerrar sesión */
+  .nav-list li a.logout-btn {
+    background-color: #e74c3c; /* Rojo */
+  }
+  
