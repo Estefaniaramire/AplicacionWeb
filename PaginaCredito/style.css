@@ -81,213 +81,108 @@ body {
   
 
 
-
-  /* Estilos generales */
+/* Mantiene el diseño general, pero organiza las tarjetas de productos */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Fondo celeste claro */
-    color: #4b0082; /* Texto morado */
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #e6e6fa; /* Lila claro */
-    border-radius: 10px;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  h1 {
-    color: #4b0082;
-  }
-  
-  nav {
-    text-align: right;
-  }
-  
-  .nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .nav-menu li {
-    position: relative;
-    margin-left: 20px;
-  }
-  
-  .nav-menu li a {
-    text-decoration: none;
-    color: #4b0082;
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #8a2be2; /* Morado uva */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-menu li a:hover {
-    background-color: #6a1c9a; /* Morado más oscuro al pasar el mouse */
-  }
-  
-  /* Barra desplegable */
-  .nav-menu li:hover .dropdown {
-    display: block;
-  }
-  
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #e6e6fa;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  }
-  
-  .dropdown li {
-    margin: 0;
-  }
-  
-  .dropdown li a {
-    padding: 10px 20px;
-    color: #4b0082;
-    text-align: left;
-    background-color: #e6e6fa;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown li a:hover {
-    background-color: #8a2be2;
-  }
-  
-  /* Sección de productos */
-  .products {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .product-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-  }
-  
-  .product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .product-card h3 {
-    color: #4b0082;
-  }
-  
-  .product-card button {
-    background-color: #8a2be2; /* Morado uva */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .product-card button:hover {
-    background-color: #6a1c9a;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Fondo celeste claro */
+  color: #4b0082; /* Texto morado */
+  margin: 0;
+  padding: 0;
+}
 
-  
+/* Contenedor de los productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los productos se acomoden automáticamente */
+  justify-content: space-around; /* Espacio uniforme entre los productos */
+  gap: 20px; /* Separación entre los productos */
+  padding: 20px;
+  margin-top: 20px;
+}
 
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff; /* Fondo celeste claro */
-    color: #4b0082; /* Texto morado */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Contenedor general */
-  .contenedor {
-    width: 160%;
-    max-width: 1200px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  /* Título centrado */
-  .titulo h1 {
-    font-size: 2rem;
-    color: #4b0082;
-    margin-bottom: 270px;
-  }
-  
-/* Contenedor del menú */
+/* Estilo de cada tarjeta de producto */
+.producto {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px; /* Ancho fijo para las tarjetas */
+  transition: transform 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+.producto:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+  border-bottom: 2px solid #4b0082; /* Línea entre imagen y texto */
+}
+
+/* Estilo del título del producto */
+.producto h3 {
+  margin: 10px;
+  font-size: 1.2rem;
+  color: #4b0082;
+}
+
+/* Estilo de la descripción del producto */
+.producto p {
+  margin: 0 10px;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Estilo del botón de compra */
+.producto button {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 0 0 8px 8px; /* Bordes redondeados solo abajo */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #6a1c9a; /* Cambia el color al pasar el ratón */
+}
+
+/* Estilo del encabezado  */
+.titulo h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #4b0082;
+  text-align: start ; /* Alinea el título hacia la izquierda */
+  margin-left: 385px; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+/* Contenedor principal del menú */
 .menu {
-    display: flex;
-    justify-content: flex-end; /* Botones alineados a la derecha */
-    margin-top: 20px; /* Ajustar esta distancia para mover los botones */
-  }
-  
-  /* Botones en columna */
-  .botones {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Alineados a la derecha */
-    gap: 15px; /* Espacio entre botones */
-    margin-top: -30px; /* Mover los botones más arriba */
-  }
-    
-  /* Estilos de los botones */
-  .boton {
-    display: inline-block;
-    padding: 10px 10px;
-    background-color: #8a2be2; /* Morado uva */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 100px; /* Tamaño uniforme de los botones */
-    text-align: center; /* Centrar el texto */
-  }
-  
-  .boton:hover {
-    background-color: #6a1c9a; /* Morado más oscuro */
-  }
-  
-  /* Botón rojo */
-  .boton-rojo {
-    background-color: #e74c3c; /* Rojo */
-  }
-  
-  .boton-rojo:hover {
-    background-color: #c0392b; /* Rojo oscuro */
-  }
-    
-  /* Botón de cerrar sesión */
-  .nav-list li a.logout-btn {
-    background-color: #e74c3c; /* Rojo */
-  }
-  
+  text-align: right;
+}
+
+/* Asegura que las tarjetas se muestren correctamente */
+.productos {
+  display: flex;
+  flex-wrap: wrap; /* Las tarjetas se ajustan automáticamente */
+  justify-content: space-around;
+  gap: 40px; /* Espaciado entre las tarjetas */
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.menu-lateral {
+  width: 200px;
+  background-color: #f9f9ff;
+  padding: 50px 20px 20px; /* Espacio superior agregado */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+

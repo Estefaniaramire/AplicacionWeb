@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Compras</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9ff;
+      margin: 0;
+      padding: 0;
+      color: #4b0082;
+    }
+
+    .contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #e6e6fa;
+      padding: 15px 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #4b0082;
+    }
+
+    .compras-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    .compras-container h2 {
+      color: #4b0082;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #4b0082;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .compra {
+      background-color: #f9f9ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .compra:hover {
+      transform: translateY(-5px);
+    }
+
+    .compra-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .compra-header h3 {
+      margin: 0;
+      color: #4b0082;
+      font-size: 1.4rem;
+    }
+
+    .compra-header span {
+      background-color: #8a2be2;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .compra-header span i {
+      font-size: 1.2rem;
+    }
+
+    .compra-details p {
+      font-size: 1rem;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .compra-details p strong {
+      color: #4b0082;
+    }
+
+    .boton-regresar {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #8a2be2;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-regresar:hover {
+      background-color: #6a1c9a;
+    }
+
+    .icono {
+      font-size: 1.5rem;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <header>
+      <h1><i class="fas fa-shopping-cart icono"></i>Historial de Compras</h1>
+    </header>
+
+    <div class="compras-container">
+      <h2><i class="fas fa-box-open icono"></i>Mis Compras Recientes</h2>
+
+      <!-- Compra 1: Vestido -->
+      <div class="compra">
+        <div class="compra-header">
+          <h3><i class="fas fa-tshirt icono"></i>Vestido de Verano Floral</h3>
+          <span><i class="fas fa-cogs icono"></i>1 Artículo</span>
+        </div>
+        <div class="compra-details">
+          <p><strong>Cantidad de artículos:</strong> 1</p>
+          <p><strong>Fecha de compra:</strong> 12 de noviembre de 2024</p>
+          <p><strong>Precio por pieza:</strong> $500 MXN</p>
+          <p><strong>Total de la compra:</strong> $500 MXN</p>
+        </div>
+      </div>
+
+      <!-- Compra 2: Zapatos -->
+      <div class="compra">
+        <div class="compra-header">
+          <h3><i class="fas fa-shoe-prints icono"></i>Zapatos Deportivos Adidas</h3>
+          <span><i class="fas fa-cogs icono"></i>1 Artículo</span>
+        </div>
+        <div class="compra-details">
+          <p><strong>Cantidad de artículos:</strong> 1</p>
+          <p><strong>Fecha de compra:</strong> 10 de noviembre de 2024</p>
+          <p><strong>Precio por pieza:</strong> $800 MXN</p>
+          <p><strong>Total de la compra:</strong> $800 MXN</p>
+        </div>
+      </div>
+
+      <!-- Compra 3: Camiseta -->
+      <div class="compra">
+        <div class="compra-header">
+          <h3><i class="fas fa-tshirt icono"></i>Camiseta de Algodón Básica</h3>
+          <span><i class="fas fa-cogs icono"></i>1 Artículo</span>
+        </div>
+        <div class="compra-details">
+          <p><strong>Cantidad de artículos:</strong> 1</p>
+          <p><strong>Fecha de compra:</strong> 5 de noviembre de 2024</p>
+          <p><strong>Precio por pieza:</strong> $300 MXN</p>
+          <p><strong>Total de la compra:</strong> $300 MXN</p>
+        </div>
+      </div>
+
+      <!-- Compra 4: Billetera -->
+      <div class="compra">
+        <div class="compra-header">
+          <h3><i class="fas fa-wallet icono"></i>Billetera de Cuero</h3>
+          <span><i class="fas fa-cogs icono"></i>1 Artículo</span>
+        </div>
+        <div class="compra-details">
+          <p><strong>Cantidad de artículos:</strong> 1</p>
+          <p><strong>Fecha de compra:</strong> 3 de noviembre de 2024</p>
+          <p><strong>Precio por pieza:</strong> $450 MXN</p>
+          <p><strong>Total de la compra:</strong> $450 MXN</p>
+        </div>
+      </div>
+
+      <!-- Botón Regresar -->
+      <a href="menu.html" class="boton-regresar"><i class="fas fa-arrow-left icono"></i> Regresar al Menú</a>
+    </div>
+  </div>
+
+</body>
+</html>
