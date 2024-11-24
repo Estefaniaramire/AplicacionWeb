@@ -17,7 +17,7 @@
     .contenedor {
       max-width: 600px;
       margin: 50px auto;
-      padding: 20px;
+      padding: 60px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,11 +29,11 @@
     }
 
     form {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .form-group label {
@@ -45,7 +45,7 @@
     .form-group input, .form-group select {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ddd;
+      border: 2px solid #ddd;
       border-radius: 5px;
       margin-top: 5px;
     }
@@ -55,13 +55,13 @@
       background-color: #8a2be2;
       color: #fff;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 10px 10px;
       border-radius: 5px;
       font-size: 1rem;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 10px;
       cursor: pointer;
-      width: 100%;
+      width: 90%;
     }
 
     .boton:hover {
@@ -86,6 +86,18 @@
       border-radius: 5px;
       text-align: center;
       font-size: 0.9rem;
+    }
+
+    /* Estilo para los botones en fila */
+    .botones-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px; /* Espacio entre los botones */
+      margin-top: 20px;
+    }
+
+    .boton {
+      width: 48%; /* Ajusta el ancho de los botones */
     }
   </style>
 </head>
@@ -114,14 +126,19 @@
         <label for="referencia">Referencia Personal:</label>
         <input type="text" id="referencia" name="referencia" placeholder="Ejemplo: Nombre y teléfono" required>
       </div>
-      <button type="button" class="boton" id="enviar-solicitud"><i class="fas fa-paper-plane"></i> Enviar Solicitud</button>
+      
+      <div class="botones-container">
+        <!-- Botón Enviar Solicitud -->
+        <button type="button" class="boton" id="enviar-solicitud"><i class="fas fa-paper-plane"></i> Enviar Solicitud</button>
+        
+        <!-- Botón Regresar al Menú -->
+        <a href="menu.html" class="boton boton-regresar"><i class="fas fa-arrow-left"></i> Regresar al Menú</a>
+      </div>
     </form>
 
     <div id="mensaje-exito" class="mensaje-exito">
       Solicitud enviada con éxito.
     </div>
-
-    <a href="menu.html" class="boton boton-regresar"><i class="fas fa-arrow-left"></i> Regresar al Menú</a>
   </div>
 
   <script>
