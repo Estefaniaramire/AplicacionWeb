@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Aumento de Crédito</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff; /* Fondo celeste claro */
+      color: #4b0082;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contenedor {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4b0082;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #4b0082;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .boton {
+      display: inline-block;
+      background-color: #8a2be2;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .boton:hover {
+      background-color: #6a1c9a;
+    }
+
+    .boton-regresar {
+      background-color: #4b0082;
+    }
+
+    .boton-regresar:hover {
+      background-color: #6a1c9a;
+    }
+
+    .mensaje-exito {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      color: #155724;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1><i class="fas fa-credit-card"></i> Solicitar Aumento de Crédito</h1>
+
+    <form id="form-aumento">
+      <div class="form-group">
+        <label for="limite-credito">Límite de Crédito Actual:</label>
+        <input type="number" id="limite-credito" name="limite-credito" placeholder="Ejemplo: 3000" required>
+      </div>
+      <div class="form-group">
+        <label for="sueldo-mensual">Sueldo Mensual:</label>
+        <input type="number" id="sueldo-mensual" name="sueldo-mensual" placeholder="Ejemplo: 15000" required>
+      </div>
+      <div class="form-group">
+        <label for="credito-solicitado">Crédito Solicitado:</label>
+        <input type="number" id="credito-solicitado" name="credito-solicitado" placeholder="Ejemplo: 5000" required>
+      </div>
+      <div class="form-group">
+        <label for="antiguedad">Antigüedad de la Cuenta (en meses):</label>
+        <input type="number" id="antiguedad" name="antiguedad" placeholder="Ejemplo: 12" required>
+      </div>
+      <div class="form-group">
+        <label for="referencia">Referencia Personal:</label>
+        <input type="text" id="referencia" name="referencia" placeholder="Ejemplo: Nombre y teléfono" required>
+      </div>
+      <button type="button" class="boton" id="enviar-solicitud"><i class="fas fa-paper-plane"></i> Enviar Solicitud</button>
+    </form>
+
+    <div id="mensaje-exito" class="mensaje-exito">
+      Solicitud enviada con éxito.
+    </div>
+
+    <a href="menu.html" class="boton boton-regresar"><i class="fas fa-arrow-left"></i> Regresar al Menú</a>
+  </div>
+
+  <script>
+    document.getElementById('enviar-solicitud').addEventListener('click', function () {
+      // Mostrar el mensaje de éxito
+      const mensajeExito = document.getElementById('mensaje-exito');
+      mensajeExito.style.display = 'block';
+
+      // Limpiar los campos del formulario
+      const formulario = document.getElementById('form-aumento');
+      formulario.reset();
+
+      // Ocultar el mensaje después de unos segundos (opcional)
+      setTimeout(() => {
+        mensajeExito.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

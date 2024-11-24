@@ -44,10 +44,41 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      cursor: pointer;
     }
 
     .boton-cerrar-sesion:hover {
       background-color: #c0392b;
+    }
+
+    /* Barra de búsqueda */
+    .barra-busqueda {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .barra-busqueda input[type="text"] {
+      width: 80%; /* Ajustado a 80% de ancho */
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    .barra-busqueda button {
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+
+    .barra-busqueda button:hover {
+      background-color: #6a1c9a;
     }
 
     /* Contenedor principal */
@@ -140,15 +171,21 @@
     <!-- Encabezado -->
     <header>
       <h1>¡Bienvenido a Nuestro Menú!</h1>
-      <a href="#" class="boton-cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+      <a href="#" class="boton-cerrar-sesion" onclick="confirmarCerrarSesion()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
     </header>
 
-<!-- Barra de navegación -->
-<nav class="barra-navegacion">
-  <ul>
-   
-  </ul>
-</nav>
+    <!-- Barra de búsqueda -->
+    <div class="barra-busqueda">
+      <input type="text" id="buscar-producto" placeholder="Buscar productos...">
+      <button type="button" onclick="buscarProducto()"><i class="fas fa-search"></i> Buscar</button>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="barra-navegacion">
+      <ul>
+        <!-- Agregar opciones de navegación si es necesario -->
+      </ul>
+    </nav>
 
     <!-- Contenido principal -->
     <div class="menu">
@@ -189,8 +226,49 @@
           <p>Descripción breve del producto.</p>
           <button>Comprar</button>
         </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+          <img src="producto5.jpg" alt="Producto 5">
+          <h3>Producto 5</h3>
+          <p>Descripción breve del producto.</p>
+          <button>Comprar</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+          <img src="producto6.jpg" alt="Producto 6">
+          <h3>Producto 6</h3>
+          <p>Descripción breve del producto.</p>
+          <button>Comprar</button>
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    // Función para manejar la búsqueda de productos
+    function buscarProducto() {
+      var query = document.getElementById('buscar-producto').value;
+      if (query) {
+        alert("Buscando: " + query);
+        // Aquí agregarías la lógica para buscar productos en la tienda
+        // o en una base de datos si la integración es más avanzada
+      } else {
+        alert("Por favor, ingrese un término de búsqueda.");
+      }
+    }
+
+    // Función para confirmar si el usuario desea cerrar sesión
+    function confirmarCerrarSesion() {
+      var confirmar = confirm("¿Desea cerrar sesión?");
+      if (confirmar) {
+        // Si el usuario selecciona "Sí", se redirige al login
+        window.location.href = "index.html"; // Aquí pon la ruta de tu página de login
+      } else {
+        // Si el usuario selecciona "Cancelar", no pasa nada y se queda en el menú
+        return false;
+      }
+    }
+  </script>
+
 </body>
 </html>

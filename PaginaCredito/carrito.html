@@ -34,6 +34,36 @@
       color: #4b0082;
     }
 
+    /* Estilo para la barra de búsqueda */
+    .barra-busqueda {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .barra-busqueda input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    .barra-busqueda button {
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+
+    .barra-busqueda button:hover {
+      background-color: #6a1c9a;
+    }
+
     .carrito-container {
       display: flex;
       justify-content: space-between;
@@ -167,6 +197,12 @@
       <h1><i class="fas fa-shopping-cart"></i> Carrito de Compras</h1>
     </header>
 
+    <!-- Barra de búsqueda -->
+    <div class="barra-busqueda">
+      <input type="text" id="buscar-producto" placeholder="Buscar productos...">
+      <button type="button" onclick="buscarProducto()"><i class="fas fa-search"></i> Buscar</button>
+    </div>
+
     <div class="carrito-container">
       <!-- Artículos en el carrito -->
       <div class="articulos-list">
@@ -206,13 +242,27 @@
           <p><strong>Total:</strong> $1100 MXN</p>
         </div>
 
-        <a href="checkout.html" class="boton-comprar"><i class="fas fa-check-circle"></i> Proceder a la compra</a>
+        <a href="pago-realizar.html" class="boton-comprar"><i class="fas fa-check-circle"></i> Proceder a la compra</a>
       </div>
     </div>
 
     <!-- Botón de regresar al menú -->
     <a href="menu.html" class="boton-regresar"><i class="fas fa-arrow-left"></i> Regresar al Menú</a>
   </div>
+
+  <script>
+    // Función para manejar la búsqueda de productos
+    function buscarProducto() {
+      var query = document.getElementById('buscar-producto').value;
+      if (query) {
+        alert("Buscando: " + query);
+        // Aquí agregarías la lógica para buscar productos en el carrito
+        // o en una base de datos si la integración es más avanzada
+      } else {
+        alert("Por favor, ingrese un término de búsqueda.");
+      }
+    }
+  </script>
 
 </body>
 </html>
